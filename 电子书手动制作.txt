@@ -1,0 +1,29 @@
+1、在github创建远程仓库ElectricBook,将其下载到本地
+2、cd ElectricBook切换到对应文件目录
+3、创建md文件命令：touch 文件名.md    比如：touch ch01.md
+【
+     提交内容到远程仓库，三步骤
+     git add .
+     git commit -m "add ch01 & ch02"
+     git push
+】
+4、构建电子书的工具：npm i -g gitbook-cli
+5、DEADME.md文件内容是电子书的简介
+     SUMMARY.md文件内容是电子书的左侧导航目录，其基本形式为：-  []()
+     其中：-代表无序列表项，有序列表项是有数字表示的
+              []()都代表超链接，[]里面代表链接的文字，()里面代表链接的地址  
+     举例：-  [简介](README.md)
+              -  [第一章](ch01.md)
+6、发布的话需要切换到另一个分支，命令为git checkout -b gh-pages
+7、将gitbook build生成的_book文件拷贝到该分支：cp -r _book/* .
+8、接着就是提交操作，提交三步骤，其中注意
+    第一次提交时，第三步命令为git push -u origin gh-pages，后续提交则不用了
+9、提交上去，就可以访问了
+     访问网址固定格式：https://sunliying123.github.io/仓库名/
+
+10、后续内容添加
+（1）切换到master分支，然后创建新的内容，用touch
+（2）编辑新创建的章节，以及SUMMARY.md文件
+（3）通过三步骤将刚修改的所有文件上传github
+（4）gitbook build生成电子书文件
+（5）再次将创建好的文件上传github（注意是上传到gh-pages分支，所以还要切换一下分支）
