@@ -1,0 +1,5 @@
+1、在github创建远程仓库ElectricBook,将其下载到本地
+2、cd ElectricBook切换到对应文件目录
+3、创建md文件命令：touch 文件名.md    比如：touch ch01.md
+4、vi *.md编辑所有md文件
+5、打印第一章内容命令：cat ch01.md
