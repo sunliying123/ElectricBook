@@ -1,0 +1,5 @@
+1、创建自动化构建的配置文件.travis.yml并编辑
+2、创建初始化文件：npm init
+3、打开package.json文件，将test中的1改为0，author改成sunliying，license协议改成MIT
+     添加devDependencies(详情见vs code)
+
